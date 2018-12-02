@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Diff</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>// Created on: 26-Nov-2018
+// Created by: Natalie Beshara
+// Created for: ICS3U
+// This program generates a 2D array
+
+func findAverage(arrayEntered: [[Int]], xValueEntered: Int, yValueEntered: Int) -&gt; Int{
+    
+    var average: Int = 0
+    
+    for counter1 in 0...xValueEntered - 1 {
+        
+        for counter2 in 0 ... yValueEntered - 1{
+             average = average + arrayEntered[counter1][counter2]
+            
+        }
+    }
+    
+    return average
+}
+show("Enter how many arrays you want (x")
+
+show("Please enter the # of X values you want")
+var xValue : Int = Int(askForDecimal("Enter # of X values"))
+
+show ("Please enter the # of Y values you want")
+let yValue : Int = Int(askForNumber("Enter the # of Y values"))
+
+var array = [[Int]]()
+
+
+for randomNumbers in 1...xValue {
+    var aRow = [Int]()
+    
+    for randomNumbers2 in 1...yValue {
+        var randomNumber : Int = Int(arc4random_uniform(100)+1)
+        aRow.append(randomNumber)
+    }
+    array.append(aRow)
+}
+
+
+var arrayAverage = findAverage(arrayEntered: array, xValueEntered: xValue, yValueEntered: yValue)
+
+show("The average is \(arrayAverage)")
+</string>
+			<key>ModifiedRange</key>
+			<string>{145, 1125}</string>
+			<key>OriginalContent</key>
+			<string>show("What is your name?")
+
+let name = ask("Name")
+
+show("Hi " + name)
+
+</string>
+			<key>OriginalRange</key>
+			<string>{145, 72}</string>
+		</dict>
+	</array>
+	<key>File</key>
+	<string>Chapters/Answers.playgroundchapter/Pages/Text.playgroundpage/Contents.swift</string>
+</dict>
+</plist>
